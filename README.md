@@ -1,9 +1,11 @@
-# atcgtools
+# vcfcompare
 
-1. The program is convenient for compare two vcf file with different formats by different methods.
+1.SYNOPSIS:
 
-The folder include two executable file vcfcompare and vcfcompare.exe.vcfcompare is for linux-64bit and vcfcompare.exe is for windows.
-vcfcompare can read gzip compressed vcf files but vcfcompare.exe can't read that at present.
+         The program is convenient for compare two vcf file with different formats by different methods.
+
+         The folder include two executable file vcfcompare and vcfcompare.exe.vcfcompare is for linux-64bit and vcfcompare.exe is for windows.
+         vcfcompare can read gzip compressed vcf files but vcfcompare.exe can't read that at present.
 
 2. USAGE:
    
@@ -31,7 +33,7 @@ vcfcompare can read gzip compressed vcf files but vcfcompare.exe can't read that
              --DP2:  high depth[int]
              --GQ:   quality[int]
              --miss: missing rate[float]
-             --method:\n
+             --method:
                              1 ref code 0 and alt code 2
                              2 maf code 2 and alt code 0
                              3 probability
@@ -41,3 +43,36 @@ vcfcompare can read gzip compressed vcf files but vcfcompare.exe can't read that
 
          (3) Split
              --in <vcf file> --out <output directory>
+    
+ FORMAT:
+ 
+         input:
+         
+         --indpair
+         A1 A2
+         B1 B2
+         ......
+         A1,A2 and B1,B2 indicate the same individual with different names which correspond to the names in file1 and file2,respectively.
+         
+         output:
+         
+         #CHROM	POS	COR	MAF
+         CHROM          chromosome.
+         POS            physical position
+         COR            correlation of snps in file1 and file2 which contain more than one individual.
+         MAF            minimal allele frequency of snps in file1.
+         
+         #IND1	IND2	COR	COUNT
+         IND1,IND2      individual 1 and individual 2 which indicate the same individual correspond to names in file1 and file2.
+         COR            correlation of individual 1 and individual 2.
+         COUNT          valid snp counts used to calculate individual correlation.
+         
+Repot bugs:
+
+         If you have questions please email to miaozepu@genomics.cn
+         
+    
+    
+    
+    
+    
