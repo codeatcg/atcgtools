@@ -10,11 +10,11 @@ vcfcompare can read gzip compressed vcf files but vcfcompare.exe can't read that
         vcfcompare <command> [options]
         DosageCor       calculate dosage correlation for each snp(commonly for imputed vcf files)
         IdosageCor      calculate dosage correlation for individual(for imputed vcf files)
-        DsgtCor calculate corelation between dosage and genotype by different methods for each snp
+        DsgtCor         calculate corelation between dosage and genotype by different methods for each snp
         IdsgtCor        calculate corelation between dosage and genotype by different methods for individual
-        GtgtCor calculate corelation between genotype and genotype by different methods for each snp
+        GtgtCor         calculate corelation between genotype and genotype by different methods for each snp
         IgtgtCor        calculate corelation between genotype and genotype by different methods for individual
-        Split   split vcf file by chromosome\n
+        Split           split vcf file by chromosome\n
         Note: The program compare two vcf files by chromosome and the snps must be ordered by physical position.If the ordered vcf file include more than one chromosome please use the split command first
 
          (1) DosageCor and IdosageCor have the same parameters
