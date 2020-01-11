@@ -1,13 +1,20 @@
 # vcfcompare
 
-1.SYNOPSIS:
+## Description:
 
-         The program is convenient for compare two vcf file with different formats by different methods.
+         The program is designed to compare two vcf file with different formats by different methods and to evaluated the strategies of imputation.
 
-         The folder include two executable file vcfcompare and vcfcompare.exe.vcfcompare is for linux-64bit and vcfcompare.exe is for windows.
-         vcfcompare can read gzip compressed vcf files but vcfcompare.exe can't read that at present.
-
-2. USAGE:
+         The folder include two executable file vcfcompare and vcfcompare.exe. vcfcompare is compiled in the 64-bit mode (linux) and vcfcompare.exe is 32-bit version for windows.
+         vcfcompare can read gzip compressed vcf files but vcfcompare.exe can't read that.
+         
+## Version
+         Version: 0.1.0beta
+         
+         Because of single precision float and lack of inspection the ouput may include some abnormal values. The new verison fixed the bugs and will be upload soon.
+         
+         
+         
+## USAGE:
    
         vcfcompare <command> [options]
         DosageCor       calculate dosage correlation for each snp(commonly for imputed vcf files)
@@ -16,7 +23,7 @@
         IdsgtCor        calculate corelation between dosage and genotype by different methods for individual
         GtgtCor         calculate corelation between genotype and genotype by different methods for each snp
         IgtgtCor        calculate corelation between genotype and genotype by different methods for individual
-        Split           split vcf file by chromosome\n
+        Split           split vcf file by chromosome
         Note: The program compare two vcf files by chromosome and the snps must be ordered by physical position.If the ordered vcf file include more than one chromosome please use the split command first
 
          (1) DosageCor and IdosageCor have the same parameters
@@ -69,7 +76,8 @@
          
 Repot bugs:
 
-         If you have questions please email to miaozepu@genomics.cn
+         If you have questions please email me.
+         Email: miaozepu@genomics.cn
          
     
     
